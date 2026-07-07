@@ -21,6 +21,7 @@ def create_mlm_batch(tokens, vocab_size, mask_prob=0.15, rng=None):
     Returns (input_ids, labels). labels[i] = original token if position was
     selected for prediction, IGNORE_INDEX otherwise.
     """
+    #rng外部传入随机数生成器
     if rng is None:
         rng = random.Random()
     input_ids = list(tokens)
